@@ -22,6 +22,10 @@ public class StudentRepository {
         saveToFile();
     }
 
+    public void updateFile() {
+        saveToFile();
+    }
+
     public List<Student> getAll() {
         return students;
     }

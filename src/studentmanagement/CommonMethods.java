@@ -32,11 +32,11 @@ public abstract class CommonMethods {
 
     public void update() {
 
-        System.out.println("Enter Student ID to update:");
-        int id = sc.nextInt();
+        System.out.println("Enter Student Roll to update:");
+        int roll = sc.nextInt();
         sc.nextLine();
 
-        Student student = repository.findById(id);
+        Student student = repository.findById(roll);
 
         if (student == null) {
             System.out.println("Student not found.");
@@ -52,7 +52,7 @@ public abstract class CommonMethods {
         student.setName(name);
         student.setAge(age);
 
-
+        repository.updateFile();
         System.out.println("Student updated successfully.");
     }
 
